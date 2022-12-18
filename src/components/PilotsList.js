@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Pilot from "./Pilot";
 import birdnest from "../assets/images/birdnest.png";
+import {URL} from '../App'
 
 const PilotsList = () => {
   const [pilots, setPilots] = useState([]);
@@ -9,7 +10,7 @@ const PilotsList = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      fetch("/drones")
+      fetch(`${URL}/drones`)
         .then((response) => response.text())
         .then((data) => {
           const droneData = txml.simplify(txml.parse(data)).report.capture
@@ -20,7 +21,7 @@ const PilotsList = () => {
         .then((data) => {
           return Promise.all(
             data.map((drone) =>
-              fetch("/pilots/" + drone.serialNumber)
+              fetch(`${URL}/pilots` + drone.serialNumber)
                 .then((resp) => resp.json())
                 .then((singlePilot) => {
                   return singlePilot;
