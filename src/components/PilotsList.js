@@ -11,7 +11,7 @@ const PilotsList = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      fetch(`${URL}/drones`)
+      fetch("/drones")
         .then((response) => response.text())
         .then((data) => {
           //console.log (txml.simplify(txml.parse(data)))
@@ -24,7 +24,7 @@ const PilotsList = () => {
         .then((data) => {
           return Promise.all(
             data.map((drone) =>
-              fetch(`${URL}/pilots/` + drone.serialNumber)
+              fetch("/pilots/" + drone.serialNumber)
                 .then((resp) => resp.json())
                 .then((singlePilot) => {
                   return singlePilot;
