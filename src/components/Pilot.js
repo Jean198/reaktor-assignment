@@ -7,7 +7,7 @@ const Pilot = ({ pilots }) => {
         <table className=" table">
           <thead className="table-dark">
             <tr>
-              <th scope="col">#</th>
+              <th scope="col"></th>
               <th scope="col">Name</th>
               <th scope="col">Distance to Nest</th>
               <th scope="col">email</th>

@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "https://assignments.reaktor.com/birdnest",
-  "homepage":"https://amazing-chebakia-058e0e.netlify.app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "assert": "^2.0.0",
+    "axios": "^1.2.1",
     "bootstrap": "^5.2.3",
     "buffer": "^6.0.3",
     "http-proxy-middleware": "^2.0.6",
