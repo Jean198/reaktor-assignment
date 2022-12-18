@@ -12,6 +12,12 @@ code {
     monospace;
 }
 
+.birdnest-image{
+  width:300px;
+  height:300px;
+  margin-bottom: 5%;
+}
+
 .list-container {
   padding: 40px 20px;
 }
